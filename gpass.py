@@ -37,7 +37,7 @@ def g_passw(lst, out, _min, _max):
             print("[*] This process may take a while...")
         print(f"[*] Started at {datetime.now().strftime('%d/%m/%Y - %H:%M:%S')}")
 
-        for _len in range(1, len(lst) + 1):
+        for _len in range(_min, _max + 1):
             for cmb in tqdm(itertools.permutations(lst, _len),
                                     desc=f"Generating passwords of length {_len}",
                                     leave=False):
