@@ -25,7 +25,6 @@ def v_path(f_path, w=False):
             raise FileNotFoundError(f"File '{f_path}' does not exist or is not a file.")
     return f_path
 
-
 def g_passw(lst, out, _min, _max):
     """
     Generate permutations of given elements within the specified length range
@@ -50,7 +49,6 @@ def g_passw(lst, out, _min, _max):
 
     return t_passw
 
-
 def main():
     parser = argparse.ArgumentParser(
         description="Generate a dictionary of passwords based on input words."
@@ -71,6 +69,8 @@ def main():
     # Validate length constraints
     if args.max < args.min:
         raise ValueError("Maximum length cannot be smaller than minimum length.")
+    if args.min <= 0:
+        raise ValueError("Minimum length must be a positive integer.")
 
     # Load input words
     with open(in_path, "r") as file:
