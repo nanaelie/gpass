@@ -32,7 +32,7 @@ def g_passw(lst, out, _min, _max):
     """
     t_passw = 0
     with open(out, "w") as out_f:
-        if len(lst) >= 11:
+        if len(lst) >= 20:
             print("[*] This process may take a while...")
         print(f"[*] Started at {datetime.now().strftime('%d/%m/%Y - %H:%M:%S')}")
 
